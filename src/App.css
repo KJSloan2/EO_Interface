@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.1;
+  color: #ffffff;
+}
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.sidebar {
+  display: flex;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 150px; /* Set a fixed width */
+  background-color: #242830;;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  font-family: Arial, monospace;
+}
+
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+  background-color: #242830;
+  font-family: Arial, monospace;
+  height: 100%; /* Ensure it takes full height of the sidebar */
+}
+
+.toggle-container button {
+  width: 100%;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 1em;
+  font-size: 10pt;
+  font-weight: 500;
+  background-color: #2a323c;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+  align-content: center;
+}
+
+.toggle-container button:hover {
+  background-color: #11bad7;
+  color: #000000;
+}
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.section {
+  flex-grow: 1; /* Allow sections to grow */
+  transition: flex-grow 0.5s ease; /* Smooth transition */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.left-section {
+  transition: flex-grow 0.5s ease; 
+  background-color: #111d28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.center-section {
+  transition: flex-grow 0.5s ease; 
+  background-color: #111d28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+
+.right-section {
+  transition: flex-grow 0.5s ease; 
+  background-color: #111d28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.deckNdvi-section {
+  transition: flex-grow 0.5s ease; 
+  background-color: #111d28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.deckNdvi-section-sidebar {
+  display: flex;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 150px; /* Set a fixed width */
+  background-color: #242830;;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically */
+  font-family: Arial, monospace;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.description {
+  width: 50%;
+  height:100%;
+  margin:25px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: Arial, monospace;
+  overflow-y: auto;
+}
+
+.description text {
+  font-size: 15px;
+  justify-items: left;
+  color: #000000;
+  opacity: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+.description p {
+  font-size: 15px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.button {
+  width:25%;
+  height:25px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  background-color: #003333;
+  text-align: center;
+  font-family: Arial, monospace;
+  color : #000000;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #11bad7;
+}
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*.deck {
+   : flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: #000000;
+  overflow: hidden; 
+  border: 1px solid #ffffff;
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
+  height: 100%; 
+}*/
+.deck {
+  flex-grow: 1; /* Take up the remaining space */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; 
+  height: 100%;
+}
+
+.deck-container {
+  display: flex;
+  height: 100vh; /* Ensure it takes full height of the viewport */
+  width: 100%; /* Ensure it takes full width of the parent */
+}
+
+.deck-input-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: top;
+  background-color: #242830;
+  padding: 10px;
+  border-right: 1px solid #ffffff;
+  width: 200px; /* Fixed width for the input panel */
+}
+
+.deck-input-panel input[type="range"] {
+  width: 100%; /* Full width range slider */
+  margin-top: 5px;
+  -webkit-appearance: none; /* Remove default styles */
+  appearance: none;
+  background: #ddd;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.deck-input-panel-description {
+  width: 100%;
+  height: 25vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  background-color: rgba(42, 50, 60, 0.7);
+  font-family: Arial, monospace;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.deck-input-panel-description  text {
+  font-size: 15px;
+  justify-items: left;
+  color: #000000;
+  opacity: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+}
+
+
+.deck-input-panel input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  width: 16px;
+  height: 16px;
+  background: #996699; /* Primary color for slider thumb */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.deck-input-panel input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #996699;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////*/
+/*//////////////////////////////////////////////////////////////////////////////*/
+.d3-box {
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  position: relative; /* Keep it positioned within parent */
+  background-color: #000000; /* Light background for better contrast */
+  overflow: hidden; /* Hide any overflowing content */
+  border: 1px solid #ffffff; /* Optional border */
+  border-radius: 8px; /* Optional rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.d3-box svg {
+  width: 100%;
+  background-color: #000000; /* Ensure a white background for the SVG */
+  border-radius: 8px; /* Match border radius of the container */
+}
+
+.d3-box input[type="range"] {
+  width: 100%; /* Full width range slider */
+  margin-top: 5px;
+  -webkit-appearance: none; /* Remove default styles */
+  appearance: none;
+  background: #ddd;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.d3-box input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default styling */
+  width: 16px;
+  height: 16px;
+  background: #996699; /* Primary color for slider thumb */
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: left;
+  font-family: Arial, monospace;
+  color : #000000;
+
+}
+
+.d3-box input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #996699;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: left;
+  font-family: Arial, monospace;
+}
